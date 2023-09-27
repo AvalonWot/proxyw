@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  shadowsocks:
+    image: ghcr.io/shadowsocks/sslocal-rust:latest
+    volumes:
+      - ./shadowsocks.json:/etc/shadowsocks-rust/config.json
+    ports:
+      - "127.0.0.1:1080:1080"
+      - "127.0.0.1:1081:1081"
+  kcptun:
+    image: ghcr.io/avalonwot/kcptun-docker:master
+    volumes:
+      - ./kcptun.json:/etc/kcptun/config.json
+    entrypoint: ["client", "-c", "/etc/kcptun/config.json"]
+

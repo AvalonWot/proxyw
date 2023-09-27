@@ -1,0 +1,10 @@
+{
+    "remoteaddr": "<ip>:10000-20000",
+    "localaddr": "0.0.0.0:8390",
+    "key": "<key>",
+    "crypt": "aes-128",
+    "mode": "fast3",
+    "dscp": 46,
+    "nocomp": true,
+    "autoexpire": 1200
+}
